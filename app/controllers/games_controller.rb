@@ -30,11 +30,11 @@ def score
 # p letters.split('').join(',')
 
   if (test && found)
-    @text_out = "<strong>Congratulations!!</strong> #{answer} is valid English Word!"
+    @text_out = "Congratulations!! #{answer.upcase} is valid English Word!"
   elsif test
-    @text_out = "Sorry but<strong>#{answer}</strong> does not seem to be valid English Word..."
+    @text_out = "Sorry but#{answer.upcase} does not seem to be valid English Word..."
   else
-    @text_out = "Sorry but<strong>#{answer}</strong>  can't be built out of #{letters.upcase.split('').join(' ,')}"
+    @text_out = "Sorry but#{answer.upcase}  can't be built out of #{letters.upcase.split('').join(' ,')}"
   end
 end
 
